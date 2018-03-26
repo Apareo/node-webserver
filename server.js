@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 const port = process.env.PORT || 3000;
 
-var inMaint = true;
+var inMaint = false;
 
 var app = express();
 
