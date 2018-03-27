@@ -56,6 +56,15 @@ app.get('/about', (req, resp) => {
   });
 });
 
+app.get('/Utils', (req, resp) => {
+  resp.render('utils.hbs', {
+    pageTitle: 'Utilities',
+    titleText: 'Special Utilities for Members',
+    mainText:
+      'This is where you will find special utilities built just for Members.'
+  });
+});
+
 app.get('/bad', (req, resp) => {
   resp.send({
     errorMessage: 'Cannot fulfill request!',
