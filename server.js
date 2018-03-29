@@ -56,19 +56,27 @@ app.get('/about', (req, resp) => {
   });
 });
 
-app.get('/Utils', (req, resp) => {
+app.get('/bad', (req, resp) => {
+  resp.send({
+    errorMessage: 'Cannot fulfill request!',
+    errornumber: 503
+  });
+});
+
+app.get('/projects', (req, resp) => {
+  resp.render('projects.hbs', {
+    pageTitle: 'Projects',
+    titleText: 'List of current projects',
+    mainText: 'Current Projects List.'
+  });
+});
+
+app.get('/utils', (req, resp) => {
   resp.render('utils.hbs', {
     pageTitle: 'Utilities',
     titleText: 'Special Utilities for Members',
     mainText:
       'This is where you will find special utilities built just for Members.'
-  });
-});
-
-app.get('/bad', (req, resp) => {
-  resp.send({
-    errorMessage: 'Cannot fulfill request!',
-    errornumber: 503
   });
 });
 
