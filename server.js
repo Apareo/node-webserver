@@ -40,7 +40,7 @@ app.use((req, resp, next) => {
 });
 
 app.get('/', (req, resp) => {
-  resp.render('home.hbs', {
+  resp.render('Home.hbs', {
     pageTitle: 'Home',
     titleText: 'Special Home Page',
     welcomeMessage: 'Thank you for visiting our experiment!'
